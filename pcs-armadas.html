@@ -3,8 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pirez - PCs Armadas</title>
+    <title>Pirez - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Exo+2:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <!-- ===== NAVEGACIÓN ===== -->
+    <nav>
+        <a href="#" class="logo">Pi<span>Rez</span></a>
+        <ul>
+            <li><a href="#categorias">Categorías</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#oferta">Ofertas</a></li>
+            <li><a href="#footer">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== PRODUCTOS DESTACADOS ===== -->
+    <section class="productos" id="productos">
+        <div class="productos-inner">
+            <h2 class="seccion-titulo">// <span>Destacados</span></h2>
+            <p class="seccion-subtitulo">Los productos más buscados esta semana</p>
+
+            <div class="grid-productos">
+
+                <!-- Producto 1 -->
+                <div class="tarjeta-producto">
+                    <div class="producto-imagen">
+                        <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600&q=80" alt="PC Gamer">
+                    </div>
+                    <div class="producto-info">
+                        <span class="badge">PC Gamer</span>
+                        <h3>PC Gamer Nivel 1 — Ryzen 5 + RTX 4060</h3>
+                        <p>8GB RAM DDR5 · SSD 512GB · Windows 11</p>
+                        <div class="precio">$1.299.999</div>
+                        <div class="precio-cuotas">12 cuotas de $108.333</div>
+                        <button class="btn-agregar">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="tarjeta-producto">
+                    <div class="producto-imagen">
+                        <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&q=80" alt="Monitor Gamer">
+                    </div>
+                    <div class="producto-info">
+                        <span class="badge badge-oferta">Oferta</span>
+                        <h3>Monitor 27" 165Hz Full HD Curvo</h3>
+                        <p>Panel IPS · 1ms · FreeSync Premium</p>
+                        <div class="precio">$389.999</div>
+                        <div class="precio-cuotas">6 cuotas sin interés de $64.999</div>
+                        <button class="btn-agregar">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="tarjeta-producto">
+                    <div class="producto-imagen">
+                        <img src="https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=600&q=80" alt="Teclado Mecánico">
+                    </div>
+                    <div class="producto-info">
+                        <span class="badge">Periférico</span>
+                        <h3>Teclado Mecánico RGB TKL — Switch Red</h3>
+                        <p>Layout TKL · Retroiluminación RGB · USB-C</p>
+                        <div class="precio">$129.999</div>
+                        <div class="precio-cuotas">3 cuotas de $43.333</div>
+                        <button class="btn-agregar">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="tarjeta-producto">
+                    <div class="producto-imagen">
+                        <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=600&q=80" alt="Mouse Gamer">
+                    </div>
+                    <div class="producto-info">
+                        <span class="badge">Periférico</span>
+                        <h3>Mouse Gamer 16000 DPI — 6 botones</h3>
+                        <p>Sensor óptico · Peso ajustable · RGB</p>
+                        <div class="precio">$74.999</div>
+                        <div class="precio-cuotas">3 cuotas de $24.999</div>
+                        <button class="btn-agregar">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="tarjeta-producto">
+                    <div class="producto-imagen">
+                        <img src="https://images.unsplash.com/photo-1546435770-a3e736375f93?w=600&q=80" alt="Auriculares Gamer">
+                    </div>
+                    <div class="producto-info">
+                        <span class="badge badge-oferta">Oferta</span>
+                        <h3>Auriculares Gamer Surround 7.1</h3>
+                        <p>Micrófono retráctil · RGB · USB</p>
+                        <div class="precio">$89.999</div>
+                        <div class="precio-cuotas">3 cuotas de $29.999</div>
+                        <button class="btn-agregar">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="tarjeta-producto">
+                    <div class="producto-imagen">
+                        <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=600&q=80" alt="Silla Gamer">
+                    </div>
+                    <div class="producto-info">
+                        <span class="badge">Mobiliario</span>
+                        <h3>Silla Gamer Pro — Cuero PU</h3>
+                        <p>Reclinable 180° · Apoyabrazos 4D · Lumbar</p>
+                        <div class="precio">$299.999</div>
+                        <div class="precio-cuotas">6 cuotas de $49.999</div>
+                        <button class="btn-agregar">Agregar al carrito</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Pirez</h4>
+                <p>Tu tienda gamer de confianza. Calidad, precio y atención para que siempre juegues en otro nivel.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#oferta">Ofertas</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Ayuda</h4>
+                <ul>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Envíos</a></li>
+                    <li><a href="#">Garantía</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="#">info@pirez.com</a></li>
+                    <li><a href="#">WhatsApp</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>tp aplicaciones pirez</p>
+        </div>
+    </footer>
+
+</body>
+</html>
