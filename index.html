@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Exo+2:wght@400;600&display=swap" rel="stylesheet">
     <style>
 
-        /* ===== VARIABLES DE COLOR  ===== */
+        /* ===== VARIABLES DE COLOR (para explicar en clase) ===== */
         :root {
             --verde: #00ff88;
             --oscuro: #0a0a0f;
@@ -239,13 +239,22 @@
 
         .producto-imagen {
             width: 100%;
-            height: 180px;
-            background: linear-gradient(135deg, #1a1a2e, #0d0d1a);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 64px;
+            height: 200px;
+            background-color: #1a1a2e;
             border-bottom: 1px solid #2a2a3a;
+            overflow: hidden;
+        }
+
+        .producto-imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .tarjeta-producto:hover .producto-imagen img {
+            transform: scale(1.05);
         }
 
         .producto-info {
@@ -473,7 +482,9 @@
 
                 <!-- Producto 1 -->
                 <div class="tarjeta-producto">
-                    <div class="producto-imagen">🖥️</div>
+                    <div class="producto-imagen">
+                        <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600&q=80" alt="PC Gamer">
+                    </div>
                     <div class="producto-info">
                         <span class="badge">PC Gamer</span>
                         <h3>PC Gamer Nivel 1 — Ryzen 5 + RTX 4060</h3>
@@ -486,7 +497,9 @@
 
                 <!-- Producto 2 -->
                 <div class="tarjeta-producto">
-                    <div class="producto-imagen">🎮</div>
+                    <div class="producto-imagen">
+                        <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&q=80" alt="Monitor Gamer">
+                    </div>
                     <div class="producto-info">
                         <span class="badge badge-oferta">Oferta</span>
                         <h3>Monitor 27" 165Hz Full HD Curvo</h3>
@@ -499,7 +512,9 @@
 
                 <!-- Producto 3 -->
                 <div class="tarjeta-producto">
-                    <div class="producto-imagen">⌨️</div>
+                    <div class="producto-imagen">
+                        <img src="https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=600&q=80" alt="Teclado Mecánico">
+                    </div>
                     <div class="producto-info">
                         <span class="badge">Periférico</span>
                         <h3>Teclado Mecánico RGB TKL — Switch Red</h3>
@@ -512,7 +527,9 @@
 
                 <!-- Producto 4 -->
                 <div class="tarjeta-producto">
-                    <div class="producto-imagen">🖱️</div>
+                    <div class="producto-imagen">
+                        <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=600&q=80" alt="Mouse Gamer">
+                    </div>
                     <div class="producto-info">
                         <span class="badge">Periférico</span>
                         <h3>Mouse Gamer 16000 DPI — 6 botones</h3>
@@ -525,7 +542,9 @@
 
                 <!-- Producto 5 -->
                 <div class="tarjeta-producto">
-                    <div class="producto-imagen">🎧</div>
+                    <div class="producto-imagen">
+                        <img src="https://images.unsplash.com/photo-1546435770-a3e736375f93?w=600&q=80" alt="Auriculares Gamer">
+                    </div>
                     <div class="producto-info">
                         <span class="badge badge-oferta">Oferta</span>
                         <h3>Auriculares Gamer Surround 7.1</h3>
@@ -538,7 +557,9 @@
 
                 <!-- Producto 6 -->
                 <div class="tarjeta-producto">
-                    <div class="producto-imagen">💺</div>
+                    <div class="producto-imagen">
+                        <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=600&q=80" alt="Silla Gamer">
+                    </div>
                     <div class="producto-info">
                         <span class="badge">Mobiliario</span>
                         <h3>Silla Gamer Pro — Cuero PU</h3>
@@ -597,7 +618,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 tp de aplicaciones</p>
+            <p>tp aplicaciones pirez</p>
         </div>
     </footer>
 
