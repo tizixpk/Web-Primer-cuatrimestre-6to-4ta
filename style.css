@@ -1,0 +1,413 @@
+     /* ===== VARIABLES DE COLOR (para explicar en clase) ===== */
+        :root {
+            --verde: #00ff88;
+            --oscuro: #0a0a0f;
+            --gris: #14141e;
+            --gris2: #1e1e2e;
+            --blanco: #e8e8f0;
+            --gris-texto: #888899;
+        }
+
+        /* ===== RESET BÁSICO ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--oscuro);
+            color: var(--blanco);
+            font-family: 'Exo 2', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* ===== BARRA DE NAVEGACIÓN ===== */
+        nav {
+            background-color: var(--gris);
+            border-bottom: 2px solid var(--verde);
+            padding: 16px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 28px;
+            color: var(--verde);
+            letter-spacing: 4px;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--blanco);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 32px;
+        }
+
+        nav ul li a {
+            color: var(--gris-texto);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: var(--verde);
+        }
+
+        /* ===== HERO (sección principal) ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--gris) 0%, var(--oscuro) 100%);
+            padding: 100px 40px;
+            text-align: center;
+            border-bottom: 1px solid #222233;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,255,136,0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 52px;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 span {
+            color: var(--verde);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--gris-texto);
+            max-width: 520px;
+            margin: 0 auto 36px;
+        }
+
+        .btn-principal {
+            display: inline-block;
+            background-color: var(--verde);
+            color: var(--oscuro);
+            padding: 14px 40px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .btn-principal:hover {
+            opacity: 0.85;
+            transform: translateY(-2px);
+        }
+
+        /* ===== SECCIÓN DE CATEGORÍAS ===== */
+        .categorias {
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .seccion-titulo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 22px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .seccion-titulo span {
+            color: var(--verde);
+        }
+
+        .seccion-subtitulo {
+            color: var(--gris-texto);
+            font-size: 14px;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
+        /* Grid de categorías: 4 columnas */
+        .grid-categorias {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .tarjeta-categoria {
+            background-color: var(--gris2);
+            border: 1px solid #2a2a3a;
+            border-radius: 8px;
+            padding: 32px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.2s, transform 0.2s;
+            text-decoration: none;
+            color: var(--blanco);
+            display: block;
+        }
+
+        .tarjeta-categoria:hover {
+            border-color: var(--verde);
+            transform: translateY(-4px);
+        }
+
+        .tarjeta-categoria .icono {
+            font-size: 36px;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .tarjeta-categoria h3 {
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .tarjeta-categoria p {
+            font-size: 12px;
+            color: var(--gris-texto);
+        }
+
+        /* ===== SECCIÓN DE PRODUCTOS ===== */
+        .productos {
+            padding: 80px 40px;
+            background-color: var(--gris);
+        }
+
+        .productos-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Grid de productos: 3 columnas */
+        .grid-productos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .tarjeta-producto {
+            background-color: var(--gris2);
+            border: 1px solid #2a2a3a;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: border-color 0.2s;
+        }
+
+        .tarjeta-producto:hover {
+            border-color: var(--verde);
+        }
+
+        .producto-imagen {
+            width: 100%;
+            height: 200px;
+            background-color: #1a1a2e;
+            border-bottom: 1px solid #2a2a3a;
+            overflow: hidden;
+        }
+
+        .producto-imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .tarjeta-producto:hover .producto-imagen img {
+            transform: scale(1.05);
+        }
+
+        .producto-info {
+            padding: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: rgba(0,255,136,0.12);
+            color: var(--verde);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 3px 10px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .badge-oferta {
+            background-color: rgba(255, 80, 80, 0.15);
+            color: #ff6060;
+        }
+
+        .producto-info h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        .producto-info p {
+            font-size: 13px;
+            color: var(--gris-texto);
+            margin-bottom: 16px;
+        }
+
+        .precio {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 22px;
+            color: var(--verde);
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .precio-cuotas {
+            font-size: 12px;
+            color: var(--gris-texto);
+            margin-bottom: 16px;
+        }
+
+        .btn-agregar {
+            display: block;
+            width: 100%;
+            background: transparent;
+            border: 1px solid var(--verde);
+            color: var(--verde);
+            padding: 10px;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .btn-agregar:hover {
+            background-color: var(--verde);
+            color: var(--oscuro);
+        }
+
+        /* ===== BANNER OFERTA ===== */
+        .banner-oferta {
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .banner-contenido {
+            background: linear-gradient(135deg, #0a1a12, #0d1a0d);
+            border: 1px solid rgba(0,255,136,0.3);
+            border-radius: 12px;
+            padding: 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .banner-texto h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 28px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .banner-texto h2 span {
+            color: var(--verde);
+        }
+
+        .banner-texto p {
+            color: var(--gris-texto);
+            font-size: 15px;
+            max-width: 380px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: var(--gris);
+            border-top: 1px solid #2a2a3a;
+            padding: 48px 40px 24px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--verde);
+            margin-bottom: 16px;
+        }
+
+        .footer-col p {
+            font-size: 13px;
+            color: var(--gris-texto);
+            line-height: 1.8;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--gris-texto);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--verde);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #2a2a3a;
+            padding-top: 24px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--gris-texto);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
