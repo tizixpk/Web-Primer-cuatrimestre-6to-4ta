@@ -1,4 +1,4 @@
-     /* ===== VARIABLES DE COLOR (para explicar en clase) ===== */
+     /* ===== VARIABLES ===== */
         :root {
             --verde: #00ff88;
             --oscuro: #0a0a0f;
@@ -8,7 +8,7 @@
             --gris-texto: #888899;
         }
 
-        /* ===== RESET BÁSICO ===== */
+        /* ===== medidas ordenadas ===== */
         * {
             margin: 0;
             padding: 0;
@@ -68,7 +68,7 @@
             color: var(--verde);
         }
 
-        /* ===== HERO (sección principal) ===== */
+        /* ===== HERO / portada ==== */
         .hero {
             background: linear-gradient(135deg, var(--gris) 0%, var(--oscuro) 100%);
             padding: 100px 40px;
