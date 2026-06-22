@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Armá tu PC Ideal - Pirez</title>
-    <link rel="stylesheet" href="css/armar-pc.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Armá tu PC Ideal - Pirez</title>
+<link rel="stylesheet" href="css/armar-pc.css">
 </head>
 <body>
 
 <header>
     <h1>🖥️ Armá tu PC Ideal</h1>
-    <p>Elegí los componentes para tu próxima PC Gamer</p>
-    <a href="index.html" class="volver">⬅ Volver al inicio</a>
+    <p>Elegí los componentes que necesitás y recibí un presupuesto personalizado.</p>
+
+    <a href="index.html" class="volver">
+        ⬅ Volver al inicio
+    </a>
 </header>
 
-<main class="contenedor">
+<div class="contenedor">
 
-    <form class="formulario">
+    <div class="formulario">
+
+        <h2>Configurá tu PC</h2>
+
+        <div class="grupo">
+            <label>Nombre</label>
+            <input type="text" id="nombre" placeholder="Tu nombre">
+        </div>
 
         <div class="grupo">
             <label>Procesador</label>
-            <select>
+            <select id="procesador">
                 <option>Ryzen 5 8600G</option>
                 <option>Ryzen 7 8700G</option>
-                <option>Intel i5 14600K</option>
-                <option>Intel i7 14700K</option>
+                <option>Intel Core i5 14600K</option>
+                <option>Intel Core i7 14700K</option>
             </select>
         </div>
 
         <div class="grupo">
             <label>Memoria RAM</label>
-            <select>
+            <select id="ram">
                 <option>16GB DDR5</option>
                 <option>32GB DDR5</option>
                 <option>64GB DDR5</option>
@@ -39,7 +49,7 @@
 
         <div class="grupo">
             <label>Placa de Video</label>
-            <select>
+            <select id="gpu">
                 <option>RTX 4060</option>
                 <option>RTX 4070</option>
                 <option>RTX 5070</option>
@@ -49,7 +59,7 @@
 
         <div class="grupo">
             <label>Almacenamiento</label>
-            <select>
+            <select id="almacenamiento">
                 <option>SSD 500GB</option>
                 <option>SSD 1TB</option>
                 <option>SSD 2TB</option>
@@ -58,7 +68,7 @@
 
         <div class="grupo">
             <label>Gabinete</label>
-            <select>
+            <select id="gabinete">
                 <option>Gamer RGB</option>
                 <option>Mid Tower</option>
                 <option>Full Tower</option>
@@ -66,13 +76,8 @@
         </div>
 
         <div class="grupo">
-            <label>Presupuesto</label>
-            <input type="range" min="500000" max="3000000" step="100000">
-        </div>
-
-        <div class="grupo">
             <label>Uso principal</label>
-            <select>
+            <select id="uso">
                 <option>Gaming</option>
                 <option>Streaming</option>
                 <option>Diseño Gráfico</option>
@@ -81,28 +86,69 @@
             </select>
         </div>
 
-        <button type="submit" class="btn">Solicitar Presupuesto</button>
-
-    </form>
-
-    <section class="resumen">
-        <h2>Resumen</h2>
-
-        <ul>
-            <li>✔ Procesador seleccionado</li>
-            <li>✔ Memoria RAM</li>
-            <li>✔ Placa de video</li>
-            <li>✔ Almacenamiento</li>
-            <li>✔ Gabinete</li>
-        </ul>
-
-        <div class="precio">
-            Precio estimado:
-            <span>$1.500.000</span>
+        <div class="grupo">
+            <label>Presupuesto</label>
+            <input type="number" id="presupuesto" placeholder="Ej: 1500000">
         </div>
-    </section>
 
-</main>
+        <div class="grupo">
+            <label>Comentarios adicionales</label>
+            <textarea id="comentarios" rows="4" placeholder="Alguna preferencia especial..."></textarea>
+        </div>
+
+        <button type="button" class="btn" onclick="enviarWhatsApp()">
+            Enviar por WhatsApp
+        </button>
+
+    </div>
+
+    <div class="info">
+        <h3>¿Cómo funciona?</h3>
+        <ul>
+            <li>Seleccioná los componentes que querés.</li>
+            <li>Ingresá tu presupuesto.</li>
+            <li>Presioná "Enviar por WhatsApp".</li>
+            <li>Recibiremos tu configuración y te responderemos con una cotización.</li>
+        </ul>
+    </div>
+
+</div>
+
+<script>
+function enviarWhatsApp(){
+
+    let nombre = document.getElementById("nombre").value;
+    let procesador = document.getElementById("procesador").value;
+    let ram = document.getElementById("ram").value;
+    let gpu = document.getElementById("gpu").value;
+    let almacenamiento = document.getElementById("almacenamiento").value;
+    let gabinete = document.getElementById("gabinete").value;
+    let uso = document.getElementById("uso").value;
+    let presupuesto = document.getElementById("presupuesto").value;
+    let comentarios = document.getElementById("comentarios").value;
+
+    let mensaje =
+`Hola, quiero armar una PC.
+
+👤 Nombre: ${nombre}
+
+🖥 Procesador: ${procesador}
+💾 RAM: ${ram}
+🎮 GPU: ${gpu}
+📦 Almacenamiento: ${almacenamiento}
+🖤 Gabinete: ${gabinete}
+🎯 Uso principal: ${uso}
+
+💰 Presupuesto: $${presupuesto}
+
+📝 Comentarios:
+${comentarios}`;
+
+    let url = "https://wa.me/5491159633227?text=" + encodeURIComponent(mensaje);
+
+    window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
