@@ -13,6 +13,7 @@ body{
 header{
     text-align:center;
     padding:40px 20px;
+    background:#161b22;
 }
 
 header h1{
@@ -21,30 +22,32 @@ header h1{
 }
 
 header p{
-    color:#aaa;
+    color:#bdbdbd;
     margin-bottom:20px;
 }
 
 .volver{
-    color:#00e5ff;
+    display:inline-block;
     text-decoration:none;
+    color:#00e5ff;
+    font-weight:bold;
 }
 
 .contenedor{
     width:90%;
     max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:2fr 1fr;
-    gap:30px;
-    padding:40px 0;
+    margin:40px auto;
 }
 
-.formulario,
-.resumen{
+.formulario{
     background:#181c25;
-    padding:25px;
+    padding:30px;
     border-radius:15px;
+}
+
+.formulario h2{
+    margin-bottom:25px;
+    color:#00e5ff;
 }
 
 .grupo{
@@ -58,55 +61,53 @@ header p{
 }
 
 .grupo select,
-.grupo input{
+.grupo input,
+.grupo textarea{
     width:100%;
     padding:12px;
     border:none;
     border-radius:8px;
+    font-size:15px;
 }
 
 .btn{
     width:100%;
     padding:15px;
+    background:#00e5ff;
     border:none;
     border-radius:8px;
-    background:#00e5ff;
-    color:black;
+    font-size:18px;
     font-weight:bold;
     cursor:pointer;
+    transition:.3s;
 }
 
 .btn:hover{
     transform:scale(1.02);
 }
 
-.resumen h2{
-    margin-bottom:20px;
-}
-
-.resumen ul{
-    list-style:none;
-}
-
-.resumen li{
-    margin-bottom:12px;
-}
-
-.precio{
+.info{
     margin-top:30px;
-    font-size:1.2rem;
-    font-weight:bold;
+    background:#181c25;
+    padding:20px;
+    border-radius:15px;
 }
 
-.precio span{
-    display:block;
-    margin-top:10px;
+.info h3{
     color:#00e5ff;
-    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.info ul{
+    padding-left:20px;
+}
+
+.info li{
+    margin-bottom:10px;
 }
 
 @media(max-width:768px){
-    .contenedor{
-        grid-template-columns:1fr;
+    header h1{
+        font-size:2rem;
     }
 }
