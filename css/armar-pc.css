@@ -10,8 +10,6 @@ body{
     color: white;
 }
 
-/* HEADER */
-
 header{
     text-align: center;
     padding: 50px 20px;
@@ -35,15 +33,12 @@ header p{
     font-weight: bold;
 }
 
-/* CONTENEDOR */
-
 .contenedor{
     width: 90%;
     max-width: 900px;
     margin: 40px auto;
 }
 
-/* FORMULARIO */
 
 .formulario{
     background: #161b22;
@@ -83,8 +78,6 @@ header p{
     resize: vertical;
 }
 
-/* BOTON */
-
 .btn{
     width: 100%;
     padding: 15px;
@@ -102,7 +95,6 @@ header p{
     background: #00c8df;
 }
 
-/* INFO */
 
 .info{
     margin-top: 30px;
@@ -125,7 +117,6 @@ header p{
     color: #ddd;
 }
 
-/* RESPONSIVE */
 
 @media (max-width: 768px){
 
