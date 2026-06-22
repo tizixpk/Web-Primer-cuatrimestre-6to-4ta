@@ -9,7 +9,7 @@
 <body>
 
 <header>
-    <h1>🖥️ Armá tu PC Ideal</h1>
+    <h1> Armá tu PC Ideal</h1>
     <p>Elegí los componentes que necesitás y recibí un presupuesto personalizado.</p>
 
     <a href="index.html" class="volver">
@@ -35,12 +35,17 @@
                 <option>Ryzen 7 8700G</option>
                 <option>Intel Core i5 14600K</option>
                 <option>Intel Core i7 14700K</option>
+                <option>Intel Core i6 </option>
+                <option>Intel Core i5 </option>
+                <option>Intel Core i4 </option>
+                <option>Otro</option>
             </select>
         </div>
 
         <div class="grupo">
             <label>Memoria RAM</label>
             <select id="ram">
+                <option>8GB DDR4</option>
                 <option>16GB DDR5</option>
                 <option>32GB DDR5</option>
                 <option>64GB DDR5</option>
@@ -60,6 +65,7 @@
         <div class="grupo">
             <label>Almacenamiento</label>
             <select id="almacenamiento">
+                <option>SSD 250GB</option>
                 <option>SSD 500GB</option>
                 <option>SSD 1TB</option>
                 <option>SSD 2TB</option>
@@ -130,16 +136,15 @@ function enviarWhatsApp(){
     let mensaje =
 `Hola, quiero armar una PC.
 
-👤 Nombre: ${nombre}
-
-🖥 Procesador: ${procesador}
-💾 RAM: ${ram}
-🎮 GPU: ${gpu}
-📦 Almacenamiento: ${almacenamiento}
-🖤 Gabinete: ${gabinete}
-🎯 Uso principal: ${uso}
-
-💰 Presupuesto: $${presupuesto}
+ Nombre: ${nombre}
+ Procesador: ${procesador}
+ RAM: ${ram}
+ GPU: ${gpu}
+ Almacenamiento: ${almacenamiento}
+ Gabinete: ${gabinete}
+ Uso principal: ${uso}
+ 
+ Presupuesto: $${presupuesto}
 
 📝 Comentarios:
 ${comentarios}`;
